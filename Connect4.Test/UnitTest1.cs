@@ -16,7 +16,7 @@ namespace Connect4.Test
         public void ValueofSingleCell()
         {
             Game g = new Game();
-            int value = g.GetCellValue();
+            int value = g.GetCellValue(0,0);
             Assert.AreEqual(value, 0);
         }
     }

@@ -4,14 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Game g = new Game();
-            int p = g.GetCellValue();
+
         }
     }
 
     public class Game
     {
-        public int GetCellValue()
+        public int GetCellValue(int x,int y)
         {
             return 0;
         }
