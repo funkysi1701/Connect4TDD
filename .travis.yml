@@ -1,3 +1,8 @@
 language: csharp
 solution: Connect4.sln
-
+install:
+  - nuget restore Connect4.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Connect4.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Connect4.Test/bin/Release/Connect4.Test.dll
