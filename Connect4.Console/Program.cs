@@ -10,9 +10,11 @@
 
     public class Game
     {
+        public int [,] gameArray = new int[7,7];
+
         public int GetCellValue(int x,int y)
         {
-            return 0;
+            return gameArray[x,y];
         }
     }
 }
