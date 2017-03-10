@@ -69,5 +69,79 @@ namespace Connect4.Test
             int value = g.GetCellValue(0, 3);
             Assert.AreEqual(2, value);
         }
+
+        [Test]
+        public void ChangePlayer()
+        {
+            Game g = new Game();
+            g.player = 1;
+            g.ChangePlayer();
+            Assert.AreEqual(2, g.player);
+            g.ChangePlayer();
+            Assert.AreEqual(1, g.player);
+            g.ChangePlayer();
+            Assert.AreEqual(2, g.player);
+        }
+
+        [Test]
+        public void CheckVerticalWin()
+        {
+            Game g = new Game();
+            g.Move(0);
+            g.Move(1);
+            g.Move(0);
+            g.Move(1);
+            g.Move(0);
+            g.Move(1);
+            g.Move(0);
+            Assert.AreEqual(true, g.HasWon);
+        }
+        [Test]
+        public void CheckHorizWin()
+        {
+            Game g = new Game();
+            g.Move(0);
+            g.Move(0);
+            g.Move(1);
+            g.Move(1);
+            g.Move(2);
+            g.Move(2);
+            g.Move(3);
+            Assert.AreEqual(true, g.HasWon);
+        }
+        [Test]
+        public void CheckDiagWin()
+        {
+            Game g = new Game();
+            g.Move(0);
+            g.Move(1);
+            g.Move(1);
+            g.Move(3);
+            g.Move(2);
+            g.Move(2);
+            g.Move(2);
+            g.Move(3);
+            g.Move(3);
+            g.Move(4);
+            g.Move(3);
+            Assert.AreEqual(true, g.HasWon);
+        }
+        [Test]
+        public void CheckDiagWin2()
+        {
+            Game g = new Game();
+            g.Move(4);
+            g.Move(3);
+            g.Move(3);
+            g.Move(1);
+            g.Move(2);
+            g.Move(2);
+            g.Move(2);
+            g.Move(1);
+            g.Move(1);
+            g.Move(0);
+            g.Move(1);
+            Assert.AreEqual(true, g.HasWon);
+        }
     }
 }
