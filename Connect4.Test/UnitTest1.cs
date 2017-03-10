@@ -17,7 +17,7 @@ namespace Connect4.Test
         {
             Game g = new Game();
             int value = g.GetCellValue(0,0);
-            Assert.AreEqual(value, 0);
+            Assert.AreEqual(0, value);
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace Connect4.Test
         {
             Game g = new Game();
             int value = g.GetCellValue(2, 2);
-            Assert.AreEqual(value, 0);
+            Assert.AreEqual(0, value);
         }
 
         [Test]
@@ -34,7 +34,7 @@ namespace Connect4.Test
             Game g = new Game();
             g.Move(0);
             int value = g.GetCellValue(0, 0);
-            Assert.AreEqual(value, 1);
+            Assert.AreEqual(1, value);
         }
 
         [Test]
@@ -44,7 +44,7 @@ namespace Connect4.Test
             g.Move(0);
             g.Move(0);
             int value = g.GetCellValue(0, 1);
-            Assert.AreEqual(value, 1);
+            Assert.AreEqual(2, value);
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace Connect4.Test
             g.Move(0);
             g.Move(0);
             int value = g.GetCellValue(0, 2);
-            Assert.AreEqual(value, 1);
+            Assert.AreEqual(1, value);
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace Connect4.Test
             g.Move(0);
             g.Move(0);
             int value = g.GetCellValue(0, 3);
-            Assert.AreEqual(value, 1);
+            Assert.AreEqual(2, value);
         }
     }
 }
