@@ -1,0 +1,3 @@
+C:\Projects\Connect4\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -target:"C:\Projects\Connect4\packages\NUnit.ConsoleRunner.3.6.1\tools\nunit3-console.exe" -targetargs:"C:\Projects\Connect4\Connect4.Test\bin\Debug\Connect4.Test.dll" -output:"C:\Projects\Connect4\TestResults\coverage.xml" -register:user
+
+C:\Projects\Connect4\packages\ReportGenerator.2.5.6\tools\ReportGenerator.exe "-reports:C:\Projects\Connect4\TestResults\*.xml" "-targetdir:C:\Projects\Connect4\TestResults"
